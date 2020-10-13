@@ -2,10 +2,17 @@ package com.nesp.sdk.android.sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nesp.sdk.android.sample.ui.SmoothActivitySample
+import com.nesp.sdk.android.sample.ui.SmoothBottomNavigationActivitySample
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        btnSmoothActivitySample.setOnClickListener { SmoothActivitySample.start(this) }
+        btnSmoothBottomNavigationActivitySample.setOnClickListener {
+            SmoothBottomNavigationActivitySample.start(this)
+        }
     }
 }
