@@ -1,0 +1,12 @@
+include ':app'
+include ':nesp-sdk-java2'
+include ':nesp-sdk-kotlin'
+include ':nesp-sdk-android'
+include ':NespRecyclerView'
+rootProject.name = "NespAndroidSdkSample"
+
+
+project(':nesp-sdk-java2').projectDir = new File(".${File.separator}nesp-sdk-android${File.separator}nesp-sdk-java${File.separator}nesp-sdk-java")
+project(':nesp-sdk-kotlin').projectDir = new File(".${File.separator}nesp-sdk-android${File.separator}nesp-sdk-kotlin${File.separator}nesp-sdk-kotlin")
+project(':nesp-sdk-android').projectDir = new File(".${File.separator}nesp-sdk-android${File.separator}nesp-sdk-android")
+project(':NespRecyclerView').projectDir = new File(".${File.separator}NespRecyclerView${File.separator}NespRecyclerView")

@@ -1,0 +1,6 @@
+[submodule "nesp-sdk-android"]
+	path = nesp-sdk-android
+	url = https://github.com/nespjin/nesp-sdk-android.git
+[submodule "NespRecyclerView"]
+	path = NespRecyclerView
+	url = https://github.com/nespjin/NespRecyclerView.git
