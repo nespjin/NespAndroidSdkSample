@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_smooth_sample.*
 
 /**
  *
- * Author: <a href="mailto:1756404649@qq.com">JinZhaolu Email:1756404649@qq.com</a>
+ * @@author: <a href="mailto:1756404649@qq.com">靳兆鲁 Email:1756404649@qq.com</a>
  * Time: Created 2020/10/13 10:09 AM
  * Project: NespAndroidSdkSample
  * Description:
