@@ -1,9 +1,10 @@
 package com.nesp.sdk.android.sample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.nesp.sdk.android.sample.ui.SmoothActivitySample
 import com.nesp.sdk.android.sample.ui.SmoothBottomNavigationActivitySample
+import com.nesp.sdk.android.sample.ui.SmoothDialogSample
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,9 @@ class MainActivity : AppCompatActivity() {
         btnSmoothActivitySample.setOnClickListener { SmoothActivitySample.start(this) }
         btnSmoothBottomNavigationActivitySample.setOnClickListener {
             SmoothBottomNavigationActivitySample.start(this)
+        }
+        btnSmoothDialogSample.setOnClickListener {
+            SmoothDialogSample.start(this)
         }
     }
 }

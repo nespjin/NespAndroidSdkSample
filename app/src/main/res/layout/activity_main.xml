@@ -16,9 +16,20 @@
         android:background="@color/black"
         android:textAllCaps="false"
         android:textColor="@color/black" />
+
     <Button
         android:id="@+id/btnSmoothBottomNavigationActivitySample"
         android:text="SmoothActivitySample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnSmoothDialogSample"
+        android:text="SmoothDialogSample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

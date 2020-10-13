@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".ui.SmoothDialogSample">
+
+    <Button
+        android:id="@+id/btnSmoothAlertDialogOneAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SmoothAlertDialog (One Action)"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnSmoothAlertDialogTwoAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="SmoothAlertDialog (Two Actions)"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnSmoothAlertDialogThreeAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="SmoothAlertDialog (Three Actions)"
+        android:textAllCaps="false" />
+
+</LinearLayout>
