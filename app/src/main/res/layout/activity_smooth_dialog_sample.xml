@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
-    tools:context=".ui.SmoothDialogSample">
+    tools:context=".ui.SmoothDialogSampleActivity">
 
     <Button
         android:id="@+id/btnSmoothAlertDialogOneAction"

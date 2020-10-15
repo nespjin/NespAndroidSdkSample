@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_smooth_dialog_sample.*
  * Time: Created 2020/10/13 19:28
  * Project: NespAndroidSdkSample
  **/
-class SmoothDialogSample : SampleBaseActivity() {
+class SmoothDialogSampleActivity : SampleBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +38,7 @@ class SmoothDialogSample : SampleBaseActivity() {
                         override fun onClick(
                             view: View, action: ISmoothDialog.Action, position: Int
                         ) {
-                            Toast.makeText(this@SmoothDialogSample, action.text, Toast.LENGTH_LONG)
+                            Toast.makeText(this@SmoothDialogSampleActivity, action.text, Toast.LENGTH_LONG)
                                 .show()
                         }
                     })
@@ -55,7 +55,7 @@ class SmoothDialogSample : SampleBaseActivity() {
     companion object {
         @JvmStatic
         fun start(context: Context) {
-            val starter = Intent(context, SmoothDialogSample::class.java)
+            val starter = Intent(context, SmoothDialogSampleActivity::class.java)
             context.startActivity(starter)
         }
     }

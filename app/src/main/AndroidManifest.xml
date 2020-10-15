@@ -20,8 +20,9 @@
         </activity>
         <activity android:name=".ui.SmoothActivitySample" />
         <activity android:name=".ui.SmoothBottomNavigationActivitySample" />
-        <activity android:name=".ui.SmoothDialogSample" />
+        <activity android:name=".ui.SmoothDialogSampleActivity" />
         <activity android:name=".ui.SampleBaseActivity" />
+        <activity android:name=".ui.SmoothSwitchSampleActivity" />
     </application>
 
 </manifest>
