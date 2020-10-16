@@ -3,7 +3,10 @@ package com.nesp.sdk.android.sample.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import com.nesp.sdk.android.sample.R
+import com.nesp.sdk.android.smooth.widget.SmoothSwitch
+import kotlinx.android.synthetic.main.activity_smooth_switch_sample.*
 
 /**
  *
@@ -17,6 +20,12 @@ class SmoothSwitchSampleActivity : SampleBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_smooth_switch_sample)
+        smoothSwitch.setOnCheckChangedListener(object : SmoothSwitch.OnCheckChangedListener {
+            override fun onChanged(smoothSwitch: SmoothSwitch, isChecked: Boolean) {
+                Toast.makeText(this@SmoothSwitchSampleActivity, isChecked.toString(),
+                    Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     companion object {

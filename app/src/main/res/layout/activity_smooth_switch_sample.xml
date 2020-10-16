@@ -12,11 +12,11 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.SwitchCompat
+        <com.nesp.sdk.android.smooth.widget.SmoothSwitch
             android:id="@+id/smoothSwitch"
             style="@style/SmoothAppTheme.Light.SmoothSwitch"
-            android:layout_width="50dp"
-            android:layout_height="24dp" />
+            android:layout_width="400dp"
+            android:layout_height="200dp" />
 
 
     </LinearLayout>
