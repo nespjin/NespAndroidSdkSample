@@ -23,6 +23,7 @@
         <activity android:name=".ui.SmoothDialogSampleActivity" />
         <activity android:name=".ui.SampleBaseActivity" />
         <activity android:name=".ui.SmoothSwitchSampleActivity" />
+        <activity android:name=".ui.SmoothSliderSampleActivity" />
     </application>
 
 </manifest>

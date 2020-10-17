@@ -15,12 +15,8 @@
 
         <com.nesp.sdk.android.smooth.widget.SmoothSwitch
             android:id="@+id/smoothSwitch"
-            style="?smoothSwitchStyle"
             android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:checked="false"
-            android:showText="false"
-            android:textSize="20sp" />
+            android:layout_height="100dp"/>
 
 
     </LinearLayout>
