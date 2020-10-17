@@ -57,6 +57,7 @@ class SmoothSliderSampleActivity : SampleBaseActivity() {
             ) {
                 tvProgress2.text = """
                     progress:$progress
+                    step:10
                     fromUser:$fromUser
                 """.trimIndent()
 
