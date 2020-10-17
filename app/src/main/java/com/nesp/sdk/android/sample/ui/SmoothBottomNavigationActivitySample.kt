@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.get
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import com.nesp.sdk.android.core.ktx.cast
@@ -25,6 +26,11 @@ class SmoothBottomNavigationActivitySample : SmoothBottomNavigationActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Do not call setContentView
+        val badgeDrawable = getBottomNavigationView().getOrCreateBadge(R.id.navigation_tab2)
+        badgeDrawable.number = 100
+
+        val badgeDrawable2 = getBottomNavigationView().getOrCreateBadge(R.id.navigation_tab3)
+        badgeDrawable2.isVisible = true
     }
 
     override fun getFragments(): List<Fragment> {

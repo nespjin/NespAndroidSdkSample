@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/btnSmoothActivitySample"
-        android:text="SmoothActivitySample"
+        android:text="SmoothActionBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/btnSmoothBottomNavigationActivitySample"
-        android:text="SmoothActivitySample"
+        android:text="SmoothBottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
