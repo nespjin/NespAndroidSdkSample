@@ -22,5 +22,8 @@ class MainActivity : AppCompatActivity() {
         btnSmoothSlider.setOnClickListener {
             SmoothSliderSampleActivity.start(this)
         }
+        btnSmoothActionSheetDialog.setOnClickListener {
+            SmoothActionSheetDialogSampleActivity.start(this)
+        }
     }
 }
