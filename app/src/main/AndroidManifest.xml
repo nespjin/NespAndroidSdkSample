@@ -25,6 +25,7 @@
         <activity android:name=".ui.SmoothSwitchSampleActivity" />
         <activity android:name=".ui.SmoothSliderSampleActivity" />
         <activity android:name=".ui.SmoothActionSheetDialogSampleActivity" />
+        <activity android:name=".ui.SmoothActivityIndicatorSampleActivity" />
     </application>
 
 </manifest>
