@@ -28,5 +28,8 @@ class MainActivity : AppCompatActivity() {
         btnSmoothActivityIndicator.setOnClickListener {
             SmoothActivityIndicatorSampleActivity.start(this)
         }
+        btnSmoothRecyclerView.setOnClickListener {
+            SmoothRecyclerViewSampleActivity.start(this)
+        }
     }
 }
