@@ -2,33 +2,37 @@ package com.nesp.sdk.android.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.nesp.sdk.android.sample.databinding.ActivityMainBinding
 import com.nesp.sdk.android.sample.ui.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var viewBinding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        btnSmoothActivitySample.setOnClickListener { SmoothActivitySample.start(this) }
-        btnSmoothBottomNavigationActivitySample.setOnClickListener {
+        viewBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
+        viewBinding.btnSmoothActivitySample.setOnClickListener { SmoothActivitySample.start(this) }
+        viewBinding.btnSmoothBottomNavigationActivitySample.setOnClickListener {
             SmoothBottomNavigationActivitySample.start(this)
         }
-        btnSmoothDialogSample.setOnClickListener {
+        viewBinding.btnSmoothDialogSample.setOnClickListener {
             SmoothDialogSampleActivity.start(this)
         }
-        btnSmoothSwitch.setOnClickListener {
+        viewBinding.btnSmoothSwitch.setOnClickListener {
             SmoothSwitchSampleActivity.start(this)
         }
-        btnSmoothSlider.setOnClickListener {
+        viewBinding.btnSmoothSlider.setOnClickListener {
             SmoothSliderSampleActivity.start(this)
         }
-        btnSmoothActionSheetDialog.setOnClickListener {
+        viewBinding.btnSmoothActionSheetDialog.setOnClickListener {
             SmoothActionSheetDialogSampleActivity.start(this)
         }
-        btnSmoothActivityIndicator.setOnClickListener {
+        viewBinding.btnSmoothActivityIndicator.setOnClickListener {
             SmoothActivityIndicatorSampleActivity.start(this)
         }
-        btnSmoothRecyclerView.setOnClickListener {
+        viewBinding.btnSmoothRecyclerView.setOnClickListener {
             SmoothRecyclerViewSampleActivity.start(this)
         }
     }

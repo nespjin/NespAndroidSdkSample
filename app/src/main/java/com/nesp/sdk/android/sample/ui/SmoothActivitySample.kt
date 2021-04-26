@@ -5,8 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import com.nesp.sdk.android.sample.R
+import com.nesp.sdk.android.sample.databinding.ActivitySmoothSampleBinding
 import com.nesp.sdk.android.smooth.app.SmoothActivity
-import kotlinx.android.synthetic.main.activity_smooth_sample.*
 
 /**
  *
@@ -17,19 +17,22 @@ import kotlinx.android.synthetic.main.activity_smooth_sample.*
  **/
 class SmoothActivitySample : SmoothActivity() {
 
+    private lateinit var viewBinding: ActivitySmoothSampleBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_smooth_sample)
+        viewBinding = ActivitySmoothSampleBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
         setTitle("Title")
         setSubtitle("Subtitle")
         setLeftAction("Action") {
             showShortToast("This is Left Action")
         }
-        setRightAction("Action"){
+        setRightAction("Action") {
             showShortToast("Hide Subtitle")
             hideSubtitle()
         }
-        adaptScrollerViewFitActivity(nestedScrollView)
+        adaptScrollerViewFitActivity(viewBinding.nestedScrollView)
         createRightMenu(R.menu.smooth_right_menu, menuInflater)
     }
 

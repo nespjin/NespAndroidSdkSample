@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import com.nesp.sdk.android.core.ktx.TAG
 import com.nesp.sdk.android.sample.R
+import com.nesp.sdk.android.sample.databinding.ActivitySmoothSliderSampleBinding
 import com.nesp.sdk.android.smooth.widget.SmoothSlider
-import kotlinx.android.synthetic.main.activity_smooth_slider_sample.*
 
 /**
  *
@@ -19,10 +19,13 @@ import kotlinx.android.synthetic.main.activity_smooth_slider_sample.*
  **/
 class SmoothSliderSampleActivity : SampleBaseActivity() {
 
+    private lateinit var viewBinding: ActivitySmoothSliderSampleBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_smooth_slider_sample)
-        smoothSlider.setOnSliderChangeListener(object : SmoothSlider.OnSliderChangeListener {
+        viewBinding = ActivitySmoothSliderSampleBinding.inflate(layoutInflater)
+
+        viewBinding.smoothSlider.setOnSliderChangeListener(object : SmoothSlider.OnSliderChangeListener {
             override fun onProgressChanged(
                 smoothSlider: SmoothSlider, progress: Int, fromUser: Boolean
             ) {
@@ -30,7 +33,7 @@ class SmoothSliderSampleActivity : SampleBaseActivity() {
                     TAG, "SmoothSliderSampleActivity.onProgressChanged:progress $progress " +
                             "fromUser: $fromUser"
                 )
-                tvProgress.text = """
+                viewBinding.tvProgress.text = """
                     progress: $progress
                     fromUser: $fromUser
                 """.trimIndent()
@@ -46,16 +49,16 @@ class SmoothSliderSampleActivity : SampleBaseActivity() {
 
         })
 
-        smoothSlider.setProgress(50)
+        viewBinding.smoothSlider.setProgress(50)
 
 
-        smoothSlider2.setOnSliderChangeListener(object : SmoothSlider.OnSliderChangeListener {
+        viewBinding.smoothSlider2.setOnSliderChangeListener(object : SmoothSlider.OnSliderChangeListener {
             override fun onProgressChanged(
                 smoothSlider: SmoothSlider,
                 progress: Int,
                 fromUser: Boolean
             ) {
-                tvProgress2.text = """
+                viewBinding.tvProgress2.text = """
                     progress:$progress
                     step:10
                     fromUser:$fromUser
@@ -72,7 +75,8 @@ class SmoothSliderSampleActivity : SampleBaseActivity() {
             }
 
         })
-        smoothSlider2.setProgress(50)
+        viewBinding.smoothSlider2.setProgress(50)
+        setContentView(viewBinding.root)
     }
 
     companion object {

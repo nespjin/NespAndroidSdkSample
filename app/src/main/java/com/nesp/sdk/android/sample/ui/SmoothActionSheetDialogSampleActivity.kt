@@ -5,10 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.nesp.sdk.android.sample.R
+import com.nesp.sdk.android.sample.databinding.ActivitySmoothActionSheetDialogSampleBinding
 import com.nesp.sdk.android.smooth.app.ISmoothActionSheetDialog
 import com.nesp.sdk.android.smooth.app.SmoothActionSheetDialog
-import kotlinx.android.synthetic.main.activity_smooth_action_sheet_dialog_sample.*
 
 /**
  *
@@ -20,10 +19,13 @@ import kotlinx.android.synthetic.main.activity_smooth_action_sheet_dialog_sample
  **/
 class SmoothActionSheetDialogSampleActivity : SampleBaseActivity() {
 
+    private lateinit var viewBinding: ActivitySmoothActionSheetDialogSampleBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_smooth_action_sheet_dialog_sample)
-        smoothActionSheetDialog.setOnClickListener {
+        viewBinding = ActivitySmoothActionSheetDialogSampleBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
+        viewBinding.smoothActionSheetDialog.setOnClickListener {
             showActionSheetDialog()
         }
     }
@@ -49,7 +51,7 @@ class SmoothActionSheetDialogSampleActivity : SampleBaseActivity() {
                 ISmoothActionSheetDialog.Action(
                     "Delete",
                     ISmoothActionSheetDialog.ActionType.DANGER,
-                    object :ISmoothActionSheetDialog.OnActionClickListener{
+                    object : ISmoothActionSheetDialog.OnActionClickListener {
                         override fun onClick(
                             view: View,
                             action: ISmoothActionSheetDialog.Action,

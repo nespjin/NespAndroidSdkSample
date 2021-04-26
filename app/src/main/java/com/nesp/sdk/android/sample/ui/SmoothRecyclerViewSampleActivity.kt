@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.nesp.sdk.android.sample.R
-import kotlinx.android.synthetic.main.activity_smooth_recycler_view_sample.*
+import com.nesp.sdk.android.sample.databinding.ActivitySmoothRecyclerViewSampleBinding
 
 /**
  *
@@ -21,11 +20,14 @@ import kotlinx.android.synthetic.main.activity_smooth_recycler_view_sample.*
  **/
 class SmoothRecyclerViewSampleActivity : SampleBaseActivity() {
 
+    private lateinit var viewBinding: ActivitySmoothRecyclerViewSampleBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_smooth_recycler_view_sample)
-        recyclerView.adapter = SampleAdapter()
-        recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        viewBinding = ActivitySmoothRecyclerViewSampleBinding.inflate(layoutInflater)
+        viewBinding.recyclerView.adapter = SampleAdapter()
+        viewBinding.recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        setContentView(viewBinding.root)
     }
 
     private class SampleAdapter : RecyclerView.Adapter<SampleViewHolder>() {

@@ -5,10 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import com.nesp.sdk.android.sample.R
+import com.nesp.sdk.android.sample.databinding.ActivitySmoothDialogSampleBinding
 import com.nesp.sdk.android.smooth.app.ISmoothDialog
 import com.nesp.sdk.android.smooth.app.SmoothAlertDialog
-import kotlinx.android.synthetic.main.activity_smooth_dialog_sample.*
 
 /**
  *
@@ -20,13 +21,16 @@ import kotlinx.android.synthetic.main.activity_smooth_dialog_sample.*
  **/
 class SmoothDialogSampleActivity : SampleBaseActivity() {
 
+    private lateinit var viewBinding: ActivitySmoothDialogSampleBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_smooth_dialog_sample)
+        viewBinding = ActivitySmoothDialogSampleBinding.inflate(layoutInflater)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        btnSmoothAlertDialogOneAction.setOnClickListener { showSmoothAlertDialog(1) }
-        btnSmoothAlertDialogTwoAction.setOnClickListener { showSmoothAlertDialog(2) }
-        btnSmoothAlertDialogThreeAction.setOnClickListener { showSmoothAlertDialog(3) }
+        viewBinding.btnSmoothAlertDialogOneAction.setOnClickListener { showSmoothAlertDialog(1) }
+        viewBinding.btnSmoothAlertDialogTwoAction.setOnClickListener { showSmoothAlertDialog(2) }
+        viewBinding.btnSmoothAlertDialogThreeAction.setOnClickListener { showSmoothAlertDialog(3) }
+        setContentView(viewBinding.root)
     }
 
     private fun showSmoothAlertDialog(actionCount: Int) {
@@ -38,7 +42,11 @@ class SmoothDialogSampleActivity : SampleBaseActivity() {
                         override fun onClick(
                             view: View, action: ISmoothDialog.Action, position: Int
                         ) {
-                            Toast.makeText(this@SmoothDialogSampleActivity, action.text, Toast.LENGTH_LONG)
+                            Toast.makeText(
+                                this@SmoothDialogSampleActivity,
+                                action.text,
+                                Toast.LENGTH_LONG
+                            )
                                 .show()
                         }
                     })
