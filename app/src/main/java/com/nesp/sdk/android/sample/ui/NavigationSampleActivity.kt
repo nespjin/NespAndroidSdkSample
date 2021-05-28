@@ -19,6 +19,8 @@ package com.nesp.sdk.android.sample.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
+import androidx.appcompat.app.AppCompatActivity
 import com.nesp.sdk.android.sample.R
 
 /**
@@ -26,20 +28,20 @@ import com.nesp.sdk.android.sample.R
  *
  * Team: NESP Technology
  * Author: <a href="mailto:1756404649@qq.com">Jinzhaolu Email:1756404649@qq.com</a>
-* Time: Created 2020/10/18 19:19
- * Project: NespAndroidSdk
+ * Time: Created 2021/4/26 22:36
+ * Project: NespAndroidSdkSample
  **/
-class SmoothActivityIndicatorSampleActivity : SampleBaseActivity() {
+class NavigationSampleActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_smooth_activity_indicator_sample)
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
+        setContentView(R.layout.activity_navigation_sample)
     }
 
-
     companion object {
+        @JvmStatic
         fun start(context: Context) {
-            val starter = Intent(context, SmoothActivityIndicatorSampleActivity::class.java)
+            val starter = Intent(context, NavigationSampleActivity::class.java)
             context.startActivity(starter)
         }
     }

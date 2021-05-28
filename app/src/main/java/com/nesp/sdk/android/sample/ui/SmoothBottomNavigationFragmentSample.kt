@@ -16,24 +16,24 @@
 
 package com.nesp.sdk.android.sample.ui
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.nesp.sdk.android.sample.R
-import com.nesp.sdk.android.smooth.app.SmoothBottomNavigationActivity
+import com.nesp.sdk.android.smooth.app.SmoothBottomNavigationFragment
 
 /**
  *
- * @@author: <a href="mailto:1756404649@qq.com">Jinzhaolu Email:1756404649@qq.com</a>
- * Time: Created 2020/10/13 11:24 AM
+ *
+ * Team: NESP Technology
+ * Author: <a href="mailto:1756404649@qq.com">Jinzhaolu Email:1756404649@qq.com</a>
+* Time: Created 2021/4/26 22:32
  * Project: NespAndroidSdkSample
- * Description:
  **/
-class SmoothBottomNavigationActivitySample : SmoothBottomNavigationActivity() {
+class SmoothBottomNavigationFragmentSample : SmoothBottomNavigationFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         // Do not call setContentView
         val badgeDrawable = getBottomNavigationView().getOrCreateBadge(R.id.navigation_tab2)
         badgeDrawable.number = 100
@@ -49,12 +49,4 @@ class SmoothBottomNavigationActivitySample : SmoothBottomNavigationActivity() {
             BottomNavigationContentFragment()
         )
     }
-
-    companion object {
-        fun start(context: Context) {
-            val starter = Intent(context, SmoothBottomNavigationActivitySample::class.java)
-            context.startActivity(starter)
-        }
-    }
-
 }
